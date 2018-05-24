@@ -1,0 +1,2 @@
+# auditmated
+Automated NPM auditing
