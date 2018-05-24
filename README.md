@@ -4,9 +4,9 @@ Automated NPM auditing
 # Usage
 
 The `auditmated` binary will run `npm audit fix` in the current repo. If `package.json` and `package-lock.json` have been updated `auditmated` will commit those changes
-with a commit message of `<branch-name> npm audit fix`. 
+with a commit message of `<branch-name> npm audit fix`. This will fix any problems identified by `npm audit` that can be fixed by patch or minor version bumps. 
 
-`auditmated` will not run for `master` or `develop` branches.
+`auditmated` only supports bash.
 
 # Example with Husky
 This will run auditing as a pre-push hook using [husky](https://www.npmjs.com/package/husky):
@@ -24,3 +24,7 @@ This will run auditing as a pre-push hook using [husky](https://www.npmjs.com/pa
   },
 }
 ```
+
+## Skipping Auditing
+
+`auditmated` will not run for `master` or `develop` branches. If you are using `husky`, you can use the `--no-verify` command line option to skip running auditing on any other branch.
