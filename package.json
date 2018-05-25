@@ -1,7 +1,7 @@
 {
   "name": "auditmated",
   "version": "0.1.0",
-  "description": "Automated NPM auditing for bash",
+  "description": "Automated npm auditing for bash",
   "bin": {
     "auditmated": "./bin/audit.sh"
   },
