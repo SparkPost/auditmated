@@ -1,5 +1,5 @@
 # auditmated
-Automated NPM auditing
+Automated npm auditing
 
 # Usage
 
