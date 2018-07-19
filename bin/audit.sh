@@ -9,7 +9,7 @@ fi
 
 npm audit fix
 git add package.json package-lock.json
-git commit -m "$MESSAGE"
+git commit --no-verify -m "$MESSAGE"
 
 # if audit fix didn't change anything the commit will exit with non-0 exit code
 # catch that error code and exit successfully
