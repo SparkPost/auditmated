@@ -10,7 +10,7 @@ with a commit message of `<branch-name> npm audit fix`. This will fix any proble
 
 # Example with Husky
 
-This will run auditing as a pre-push hook using [husky](https://www.npmjs.com/package/husky):
+This will run auditing as a pre-commit hook using [husky](https://www.npmjs.com/package/husky):
 
 ```json
 {
@@ -19,7 +19,7 @@ This will run auditing as a pre-push hook using [husky](https://www.npmjs.com/pa
   "main": "index.js",
   "husky": {
     "hooks": {
-      "pre-push": "auditmated"
+      "pre-commit": "auditmated"
     }
   },
   "devDependencies": {
@@ -29,7 +29,7 @@ This will run auditing as a pre-push hook using [husky](https://www.npmjs.com/pa
 }
 ```
 
-If you are using Husky v0, define as a `prepush` script.
+If you are using Husky v0.14, define as a `precommit` script.
 
 ```json
 {
@@ -37,7 +37,7 @@ If you are using Husky v0, define as a `prepush` script.
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "prepush": "auditmated"
+    "precommit": "auditmated"
   },
   "devDependencies": {
     "auditmated": "0.1.0",
