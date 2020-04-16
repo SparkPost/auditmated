@@ -8,7 +8,7 @@ if [[ $BRANCH = 'master' ]] || [[ $BRANCH = 'develop' ]]; then
   exit 0
 fi
 
-if [[ "$(npm audit fix)" ]]; then
+if [[ ! "$(npm audit fix)" ]]; then
   # if audit fix didn't change anything the commit will exit with non-0 exit code
   # catch that error code and exit successfully
   echo 'audit: minor and patch version of deps have no known security issues'
@@ -16,4 +16,4 @@ if [[ "$(npm audit fix)" ]]; then
 fi
 
 git add package.json package-lock.json &&
-git commit --no-verify -m "$MESSAGE"
+  git commit --no-verify -m "$MESSAGE"
