@@ -2,7 +2,7 @@
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 MESSAGE="$BRANCH npm audit fix"
 
-if [[ $BRANCH = 'master' ]] || [[ $BRANCH = 'develop' ]] ; then
+if [[ $BRANCH = 'master' ]] || [[ $BRANCH = 'main' ]] || [[ $BRANCH = 'develop' ]] ; then
   echo 'skipping audit on '$BRANCH' branch'
   exit 0
 fi
