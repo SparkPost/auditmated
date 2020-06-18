@@ -48,4 +48,4 @@ If you are using Husky v0, define as a `prepush` script.
 
 ## Skipping Auditing
 
-`auditmated` will not run for `master` or `develop` branches. If you are using `husky`, you can use the `--no-verify` command line option to skip running auditing on any other branch.
+`auditmated` will not run for `master`, `main`, or `develop` branches. If you are using `husky`, you can use the `--no-verify` command line option to skip running auditing on any other branch.
